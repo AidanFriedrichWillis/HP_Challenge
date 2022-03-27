@@ -1,6 +1,10 @@
 const mongoose = require("mongoose");
-
 const Schema = mongoose.Schema;
+
+/*
+  A basic model following MVC design, contains validation and timestamps.
+
+*/
 
 const originalURL_Model = new Schema(
   {
