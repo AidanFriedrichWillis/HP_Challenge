@@ -1,0 +1,30 @@
+const mongoose = require("mongoose");
+
+const Schema = mongoose.Schema;
+
+const originalURL_Model = new Schema(
+  {
+    originalURL: {
+      type: String,
+      required: true,
+      unique: true,
+      trim: true,
+      minlength: 5,
+      maxlength: 150,
+      unique: true,
+    },
+    encodedURL: {
+      type: String,
+      required: true,
+      trim: true,
+      minlength: 1,
+    },
+  },
+  {
+    timestamps: true,
+  }
+);
+
+const originalURL = mongoose.model("originalURL", originalURL_Model);
+
+module.exports = originalURL;
